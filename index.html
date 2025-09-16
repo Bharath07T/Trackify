@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles/styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trackify</title>
+    <link rel="icon" href="assests/logo.png" type="image/icon type"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="brand">
+           <img class="img" src="assests/logo.png"/>
+           <h2 class="logo">Trackify</h2>
+        </div>
+    </header>
+    <div class="navigation">
+  <ul>
+    <li class="list active">
+      <a href="#home">
+        <span class="icon"><i class="fas fa-chart-line"></i></span>
+        <span class="text">Dashboard</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="#add-expense">
+        <span class="icon"><i class="fas fa-plus-circle"></i></span>
+        <span class="text">Add</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="#categories">
+        <span class="icon"><i class="fas fa-th-list"></i></span>
+        <span class="text">Category</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="#analytics">
+        <span class="icon"><i class="fas fa-chart-pie"></i></span>
+        <span class="text">Chart</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="#settings">
+        <span class="icon"><i class="fas fa-cog"></i></span>
+        <span class="text">Settings</span>
+      </a>
+    </li>
+    <div class="indicator"></div>
+  </ul>
+</div>
+<div class="dashboard-container">
+  <div class="card"><span class="span income">Income</span><br>₹15,000</div>
+  <div class="card"><span class="span expense">Expense</span><br>₹13,000</div>
+  <div class="card"><span class="span balance">Balance</span><br>₹2,000</div>
+</div>
+<div class="container">
+  <div class="card2">
+    <div class="span1">Recent Transactions</div>
+  <ul>
+    <li>🍔 McDonald's <span class="amount">- ₹350</span></li>
+    <li>🚌 Bus Pass <span class="amount">- ₹1200</span></li>
+    <li>📱 Recharge <span class="amount">- ₹199</span></li>
+    <li>💼 Freelancing <span class="amount income">+ ₹3000</span></li>
+    <li>🏠 Rent <span class="amount">- ₹5000</span></li>
+  </ul>
+  </div>
+  <div class="card1">
+    <div class="span1">Expenses by Category</div>
+    <canvas id="expenseChart"></canvas>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#add-expense">Add Expense</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+      </ul>
+    </div>
+    <div class="section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+    <div class="section">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:support@trackify.com">Email Us</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Trackify. Built with ❤️ by Bharath.</p>
+  </div>
+</footer>
+
+ <script>
+  const ctx = document.getElementById('expenseChart');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Food', 'Rent', 'Transport', 'Entertainment', 'Others'],
+        datasets: [{
+          label: 'Monthly Expenses',
+          data: [3000, 5000, 1200, 800, 1000],
+          backgroundColor: ['#66bb6a', '#ef5350', '#42a5f5', '#ffa726', '#ab47bc'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#333',
+              font: {
+                size: 14
+              }
+            }
+          }
+        }
+      }
+    });
+  const list = document.querySelectorAll('.list');
+  function activateLink() {
+    list.forEach(item => item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  list.forEach(item => item.addEventListener('click', activateLink));
+</script>
+</body>
+</html>
