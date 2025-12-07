@@ -5,17 +5,14 @@ Track your daily expenses, visualize your spending, and stay within budget — a
 ## 🚀 Features
 - Add/edit/delete expenses
 - Category & date filtering
-- Interactive charts (Chart.js)
 - LocalStorage persistence
 - Responsive design + Dark mode
-- Export to CSV
 
 ## 📸 Screenshots
 _Add screenshots here_
 
 ## 🔧 Built With
 - HTML, CSS, JavaScript
-- Chart.js
 
 ## 📦 Getting Started
 
