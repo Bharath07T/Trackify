@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/budget.css">
+    <title>Trackify</title>
+    <link rel="icon" href="../assests/logo.png" type="image/png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="row-one">
+            <img class="img" src="../assests/logo.png"/>
+            <h2 class="logo">Trackify</h2>
+        </div>
+
+        <div class="row-two">
+            <a href="../HTML/index.html">DashBoard</a>
+            <a href="../HTML/AddExpense.html">Add Expense</a>
+            <a href="../HTML/History.html">History</a>
+            <a href="../HTML/Budget.html">Budget</a>
+            <a href="../HTML/Settings.html">Settings</a>
+        </div>
+    </nav>
+
+    <div class="budget-container">
+        <h2>Monthly Budget</h2>
+
+        <div class="set-Budget-Box">
+            <label for="monthlyBudget">Set Monthly Budget:</label>
+            <input type="number" id="monthlyBudget" placeholder="Enter Amount">
+            <button id="saveBudget">Save</button>
+        </div>
+
+        <h3>Budget Summary</h3>
+        <div class="summary-box">
+            <p><strong>Budget:</strong> ₹<span id="budgetValue">0</span></p>
+            <p><strong>Spent:</strong> ₹<span id="spentValue">0</span></p>
+            <p><strong>Remaining:</strong> ₹<span id="remainingValue">0</span></p>
+            <p><strong>Status:</strong> <span id="statusText">Safe</span></p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p id="progressPercent">0% Used</p>
+
+        <p id="budgetAlert" style="color: red; font-weight: bold;"></p>
+
+        <h3>Recent Expenses (Last 5)</h3>
+        <ul id="recentExpensesList"></ul>
+
+        <button id="viewHistory">View Full History</button>
+    </div>
+
+    <script src="../scripts/budget.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/History.css">
+    <title>Trackify</title>
+    <link rel="icon" href="../assests/logo.png" type="image/png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="row-one">
+            <img class="img" src="../assests/logo.png"/>
+            <h2 class="logo">Trackify</h2>
+        </div>
+
+        <div class="row-two">
+            <a href="../HTML/index.html">DashBoard</a>
+            <a href="../HTML/AddExpense.html">Add Expense</a>
+            <a href="../HTML/History.html">History</a>
+            <a href="../HTML/Budget.html">Budget</a>
+            <a href="../HTML/Settings.html">Settings</a>
+        </div>
+    </nav>
+
+    <div class="filters-container">
+    <select id="filterCategory">
+        <option value="">All Categories</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Other">Other</option>
+    </select>
+
+    From <input type="date" id="fromDate">
+    To <input type="date" id="toDate">
+
+    Min <input type="number" id="minAmount" placeholder="0">
+    Max <input type="number" id="maxAmount" placeholder="10000">
+
+    <button id="applyFilters">Apply</button> <button id="resetFilters">Reset</button>
+</div>
+
+
+
+<div class="sort-container">
+    <select id="sortType">
+        <option value="">Sort</option>
+        <option value="newest">Newest → Oldest</option>
+        <option value="oldest">Oldest → Newest</option>
+        <option value="high">Highest → Lowest</option>
+        <option value="low">Lowest → Highest</option>
+    </select>
+</div>
+
+
+
+    <div id="displaycard">
+        <ul id="historylist"></ul>
+    </div>
+</body>
+<script src="../scripts/History.js"></script>
+</html>

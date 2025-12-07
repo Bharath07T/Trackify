@@ -1,0 +1,210 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* Light & Dark Theme Variables */
+:root {
+    --bg: #f4f5f7;
+    --card: #ffffff;
+    --text: #222;
+    --border: #ccc;
+}
+.dark {
+    --bg: #1e1e1e;
+    --card: #2c2c2c;
+    --text: #ffffff;
+    --border: #555;
+}
+
+/* NAVBAR */
+.nav-bar {
+    width: 100%;
+    background: var(--card);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.row-one {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo{
+  font-weight: bolder;
+  font-family: 'Lucida Handwriting','sans-serif';
+  color:	white;
+  font-style: oblique;
+  text-shadow:
+                -2px -2px 0 #2e7d32,
+                2px -2px 0 	#2e7d32,
+                -2px 2px 0 	#2e7d32,
+                2px 2px 0 	#2e7d32,
+                -3px 0px 0 	#2e7d32,
+                3px 0px 0 	#2e7d32,
+                0px -3px 0 	#2e7d32,
+                0px 3px 0 	#2e7d32;
+}
+
+.row-two a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.row-two a:hover {
+    color: #4a7dfc;
+}
+
+/* SETTINGS CONTAINER */
+.settings-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--border);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Theme toggle switch */
+.switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    background: #ccc;
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.slider:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    left: 3px;
+    bottom: 2.5px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background: #4a7dfc;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Reset button */
+button.danger {
+    padding: 8px 14px;
+    background: #ff3a3a;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+button.danger:hover {
+    opacity: 0.85;
+}
+
+/* CATEGORY LIST */
+.category-add {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.category-add input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.category-add button {
+    padding: 8px 14px;
+    background: #4a7dfc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#categoryList {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#categoryList li {
+    background: var(--bg);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deleteCat {
+    padding: 5px 10px;
+    font-size: 12px;
+    background: #ff4d4d;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trackify - Settings</title>
+    <link rel="stylesheet" href="../styles/settings.css">
+    <link rel="icon" href="../assests/logo.png" type="image/png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="nav-bar">
+        <div class="row-one">
+            <img class="img" src="../assests/logo.png"/>
+            <h2 class="logo">Trackify</h2>
+        </div>
+
+        <div class="row-two">
+            <a href="../HTML/index.html">DashBoard</a>
+            <a href="../HTML/AddExpense.html">Add Expense</a>
+            <a href="../HTML/History.html">History</a>
+            <a href="../HTML/Budget.html">Budget</a>
+            <a href="../HTML/Settings.html">Settings</a>
+        </div>
+    </nav>
+
+<!-- SETTINGS PAGE -->
+<div class="settings-container">
+
+    <!-- THEME SWITCH -->
+    <div class="card">
+        <h3>Theme</h3>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+        </label>
+        <p>Toggle between Light and Dark mode.</p>
+    </div>
+
+    <!-- RESET DATA -->
+    <div class="card">
+        <h3>Reset All Data</h3>
+        <button id="resetBtn" class="danger">Clear All Data</button>
+        <p>This will remove all saved expenses from your browser.</p>
+    </div>
+
+    <!-- CATEGORY MANAGEMENT -->
+    <div class="card">
+        <h3>Manage Categories</h3>
+
+        <div class="category-add">
+            <input type="text" id="newCategory" placeholder="New category...">
+            <button id="addCategory">Add</button>
+        </div>
+
+        <ul id="categoryList"></ul>
+    </div>
+
+</div>
+
+<script src="../scripts/settings.js"></script>
+</body>
+</html>
